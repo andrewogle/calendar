@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import dateFns from "date-fns";
-import Header from './Header'
+import Header from "./Header";
+import DaysOfWeek from "./DaysOfWeek";
+import Cells from './Cells'
 import "./calendar.css";
 
 const Calendar = props => {
@@ -9,9 +10,9 @@ const Calendar = props => {
 
   return (
     <div className="calendar">
-      <Header />
-      {/* <div>{daysOfWeek()}</div> */}
-      {/* <div>{cells()}</div> */}
+      <Header setCurrDate = {setCurrentDate} currDate = {currentDate} />
+      <DaysOfWeek currDate = {currentDate}/>
+      <Cells currDate = {currentDate} />
     </div>
   );
 };
